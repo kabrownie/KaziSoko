@@ -1,0 +1,8 @@
+{
+  "name": "kazi-soko-site",
+  "private": true,
+  "scripts": {
+    "dev": "python3 -m http.server 4321 -d .",
+    "build": "rm -rf dist && mkdir -p dist && cp index.html app.js styles.css dist/ && cp -r public/. dist/ && touch dist/.nojekyll"
+  }
+}

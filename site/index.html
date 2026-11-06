@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Search public job adverts across Kenya.">
+  <title>Kazi Soko | Kenyan jobs</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <nav><a class="brand" href="./">Kazi Soko</a><span>Kenyan jobs, one search</span></nav>
+    <div class="hero-content">
+      <p class="eyebrow">PUBLIC JOB ADVERTS</p>
+      <h1>Find your next opportunity.</h1>
+      <p>Search jobs from government, counties, institutions, and companies across Kenya.</p>
+      <label class="search"><span class="sr-only">Search jobs</span><input id="query" type="search" placeholder="Search title, organisation or keyword"><kbd>⌘ K</kbd></label>
+    </div>
+  </header>
+  <main>
+    <section class="toolbar" aria-label="Job filters">
+      <label>Category<select id="category"><option value="">All categories</option></select></label>
+      <label>Location<select id="location"><option value="">All locations</option></select></label>
+      <label>Deadline from<input id="from" type="date"></label>
+      <label>Deadline to<input id="to" type="date"></label>
+      <button id="clear" type="button">Clear filters</button>
+    </section>
+    <div class="results-heading"><h2>Latest opportunities</h2><span id="count" aria-live="polite"></span></div>
+    <section id="jobs" class="jobs" aria-live="polite"></section>
+    <p id="empty" class="empty" hidden>No matching jobs found. Try a broader search.</p>
+  </main>
+  <footer>Kazi Soko aggregates publicly available job adverts and is not affiliated with any government body or employer. Always verify details on the <a href="https://gaa.go.ke/">original source</a>.</footer>
+</body>
+</html>
